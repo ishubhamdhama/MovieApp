@@ -1,0 +1,25 @@
+.About__Title{
+    text-align: center;
+    color: #4fcca3;
+    font-weight: 700;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+.Movie__link{
+    color: #4fcca3;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.features{
+    color: #87c0ac;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.whole__body p {
+    text-align: center;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-size: 1.1rem;
+    word-spacing: 0.2rem;
+}

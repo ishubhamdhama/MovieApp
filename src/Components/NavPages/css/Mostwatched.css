@@ -1,0 +1,165 @@
+.topRated__Card {
+    display: inline-block;
+    transition: transform .2s;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.7rem;
+    margin-left: 3rem;
+    cursor: pointer;
+    width: 20%;
+    height: 500px;
+    z-index: 0;
+    border: 1px solid rgb(99, 99, 99);
+}
+
+.topRated_title h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #4fcca3;
+    padding: 2rem;
+    font-family: 'Baloo Paaji 2', sans-serif;
+}
+
+.topRated_title p {
+    font-size: 1.2rem;
+    word-spacing: 3px;
+    text-align: center;
+    width: 80%;
+    margin-left: 9rem;
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-weight: 600;
+}
+
+.topRated__cards__title {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+    color: #fff;
+}
+
+.topRated__Card:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.topRated__cards__img {
+    height: 500px;
+}
+
+.topRated__cards__overlay {
+    position: absolute;
+    padding: 0 1rem 1rem 1rem;
+    bottom: 0px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.topRated__Card:hover .topRated__cards__overlay {
+    opacity: 1;
+}
+
+.topRated__card__runtime {
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+.topRated__card__rating {
+    float: right;
+}
+
+.topRated__card__description {
+    font-style: italic;
+    font-size: .75rem;
+    margin-bottom: 0.25rem;
+}
+
+
+@media (max-width: 768px) {
+    .topRated__cards__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .topRated__Card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0.45rem;
+        height: 80%;
+    }
+
+    .topRated__cards__img {
+        width: 100%;
+        height: auto;
+        max-height: 55vh;
+    }
+
+    .topRated__cards__overlay {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .topRated_title p {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+        text-align: center;
+        width: 80%;
+        margin-left: 2.5rem;
+        font-family: 'Baloo Paaji 2', sans-serif;
+        font-weight: 600;
+    }
+}
+@media(min-width:768px) and (max-width:991px){
+    .topRated__cards__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .topRated__Card {
+        width: 100%;
+        max-width: 300px;
+        margin: 1rem;
+        height: 80%;
+    }
+
+    .topRated__cards__img {
+        width: 100%;
+        height: auto;
+        max-height: 55vh;
+    }
+
+    .topRated__cards__overlay {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .topRated_title p {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+        text-align: center;
+        width: 80%;
+        margin-left: 2.5rem;
+        font-family: 'Baloo Paaji 2', sans-serif;
+        font-weight: 600;
+    }
+}

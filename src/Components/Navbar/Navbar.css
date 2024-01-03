@@ -1,0 +1,29 @@
+.navbar{
+    font-family: 'Baloo Paaji 2', sans-serif;
+    font-size: 23px;
+}
+.navbar-brand{
+    width: 65%;
+}
+.nav-item .nav-link {
+    color: #4fcca3 !important;
+    font-weight: 600;
+}
+.nav-item{
+    text-align: center;
+}
+.nav-item .nav-link:hover{
+    color: #000 !important;
+}
+
+@media(max-width:768px){
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-brand img {
+        width: 20%; 
+    }
+}
