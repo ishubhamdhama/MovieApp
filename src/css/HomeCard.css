@@ -53,7 +53,7 @@
 }
 @media (max-width: 768px) {
     .posterImage {
-        height: 200px;
+        height: 250px;
     }
 
     .posterImage_overlay {
@@ -70,7 +70,7 @@
     }
     .posterImage_runtime {
         font-size: 1rem;
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
     }
 }
 

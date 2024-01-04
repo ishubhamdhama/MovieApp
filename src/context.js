@@ -3,15 +3,15 @@ import React, { useContext, useEffect, useState } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({children}) => {
-    const [isMovie, setIsMovie] = useState({Search: []}); // Initialize as an object with a Search array
+    const [isMovie, setIsMovie] = useState(""); // Initialize as an object with a Search array
     const [query, setQuery] = useState([]);
-    const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${query}`;
+    const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&t=${query}`;
 
     const get_movie = async (url) => {
         try {
             const res = await fetch(url);
             const data = await res.json();
-            console.log(data);
+            // console.log(data);
             setIsMovie(data);
         } catch (error) {
             console.log(error.message);

@@ -12,6 +12,7 @@ const Search = () => {
       <form action="#" onSubmit={(e) => e.preventDefault()}>
         <input 
         type="text"
+        spellcheck="false"
         placeholder='search your movie'
         value={query}
         onChange={(e) => setQuery(e.target.value)}/>

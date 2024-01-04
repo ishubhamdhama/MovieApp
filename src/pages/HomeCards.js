@@ -21,6 +21,7 @@ const HomeCards = () => {
                     transitionTime={1000}
                     showStatus={false}
                     showArrows={true}
+                    showIndicators={false}
                 >
                     {popularMovies.map(movie => {
                         return (

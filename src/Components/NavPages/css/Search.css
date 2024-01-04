@@ -10,6 +10,7 @@
     font-size: 1.3rem;
     font-family: 'Baloo Paaji 2', sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 .search__movie input::placeholder{
     text-align: center;

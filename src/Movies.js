@@ -5,27 +5,38 @@ import './css/Movies.css';
 
 const Movies = () => {
   const { isMovie } = useGlobalContext();
-  const moviesList = isMovie.Search || [];
+
   return (
-    <>
-      <div className='movies__cards__container'>
-        {moviesList.map((movie) => (
-          <Link key={movie.id} style={{ textDecoration: "none", color: "white" }}>
-            <div className='movies__Card'>
-              <img src={movie.Poster} alt={movie.imdbID} style={{color:"black"}}className='movies__cards__img' />
-              <div className='movies__cards__overlay'>
-                <div className="movies__cards__title">{movie.Title}</div>
-                <div className="movies__card__runtime">
-                  {movie.Year}
-                  <span className="movies__card__rating">{movie.imdbID}<i className="fas fa-star" /></span>
+    <div className='movies__cards__container'>
+      {isMovie && isMovie.Title ? (
+        <Link key={isMovie.imdbID} style={{ textDecoration: "none", color: "white" }} to={`/movie/${isMovie.imdbID}`}>
+          <div className="card mb-3 card__center" style={{maxWidth: "800px"}}>
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img src={isMovie.Poster} className="img-fluid rounded-start" alt="..." style={{height:"100%"}}/>
+              </div>
+              <div className="col-md-8">
+                <div className="card-body movie__details">
+                  <h5 className="card-title">{isMovie.Title}</h5>
+                  <p className="card-text"><span className='bold__group'>Description - </span>{isMovie.Plot}</p>
+                  <p className="card-text"><span className='bold__group'>Actors - </span>{isMovie.Actors}</p>
+                  <p className="card-text"><span className='bold__group'>Writer - </span>{isMovie.Writer}</p>
+                  <p className="card-text"><span className='bold__group'>imdbRating - </span>{isMovie.imdbRating}</p>
+                  <p className="card-text"><span className='bold__group'>Genre - </span>{isMovie.Genre}</p>
+                  <p className="card-text"><span className='bold__group'>Language - </span>{isMovie.Language}</p>
+                  <p className="card-text"><small className="text-body-secondary">{isMovie.Released}</small></p>
                 </div>
               </div>
             </div>
-          </Link>
-        ))}
-      </div>
-    </>
-  )
-}
+          </div>
+        </Link>
+      ) : (
+        <div>
+          <h3 className='text-center'>Search Your Movie on the above input</h3>
+        </div>
+      )}
+    </div>
+  );
+};
 
-export default Movies
+export default Movies;
